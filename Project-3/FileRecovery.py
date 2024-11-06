@@ -24,14 +24,14 @@ def hexdump(data, width=16):
     return '\n'.join(lines)
 
 # Read the binary data from the disk dump file
-with open('Project-3/Project3.dd', 'rb') as disk_image:
+with open('Project-3/disk-drives/Project3.dd', 'rb') as disk_image:
     data = disk_image.read()
 
 # Generate the hexdump string
 hexdump_string = hexdump(data)
 
 # Write the hexdump to a text file
-with open('hexdump_output.txt', 'w') as output_file:
+with open('Project-3/Outputs/hexdump_output.txt', 'w') as output_file:
     output_file.write(hexdump_string)
 
 print("Hexdump output has been saved to 'hexdump_output.txt'.")
