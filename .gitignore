@@ -1,4 +1,8 @@
 # venv folder
 
 .venv/
+venv/
 
+# MacOS files
+
+.DS_Store
