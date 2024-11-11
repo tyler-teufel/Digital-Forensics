@@ -54,7 +54,7 @@ def hexdump(data, width=16):
     return '\n'.join(lines)
 
 # Function to check if a located directory entry is likely valid based on ASCII name and extension.
-def is_likely_directory_entry(entry):
+def is_directory_entry(entry):
 
     # Split the entry into name and extension parts, each 8 and 3 bytes long respectively.
     name_part = entry[:8]
@@ -82,7 +82,7 @@ def find_directory_entries(data):
         entry = data[i:i + 32]
 
         # Check if the entry is likely a directory entry based on the ASCII name and extension.
-        if is_likely_directory_entry(entry):
+        if is_directory_entry(entry):
 
             # Extract the file name and extension from the entry, and store in the dictionary.
             # Ignore any encoding errors and strip any whitespace.
