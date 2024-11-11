@@ -1,6 +1,7 @@
 # venv folder
 
 .venv/
+venv/
 
 # MacOS files
 
